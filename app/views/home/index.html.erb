@@ -1,16 +1,28 @@
-<div class="container-fluid">
+<div class="container">
   <div class="mt-5"></div>
-  <div class="row justify-content-center">
-    Dati aggiornati al giorno <%= @reading.date.strftime("%d/%m/%Y") %>
-  </div>
-  <div class="row justify-content-center pippo">
-    <%= (@reading.new_positives.to_f / @reading.new_tampons.to_f * 100).round(2) %>%
+
+  <div class="row">
+    <div class="col">
+      <p class="text-center">Dati aggiornati al giorno <%= @reading.date.strftime("%d/%m/%Y") %></p>
+    </div>
   </div>
 
-  <div class="row justify-content-center">
-    Nuovi positivi rispetto al giorno precedente: <%= @reading.new_positives %>
+  <div class="row">
+    <div class="col">
+      <div class="percentage">
+        <p class="text-center"><%= (@reading.new_positives.to_f / @reading.new_tampons.to_f * 100).round(2) %>%</p>
+      </div>
+    </div>
   </div>
-  <div class="row justify-content-center">
-    Nuovi tamponi rispetto al giorno precedente: <%= @reading.new_tampons %>
+
+  <div class="row">
+    <div class="col">
+      <p class="text-center">Nuovi positivi rispetto al giorno precedente: <%= @reading.new_positives %></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p class="text-center">Nuovi tamponi rispetto al giorno precedente: <%= @reading.new_tampons %></p>
+    </div>
   </div>
 </div>
