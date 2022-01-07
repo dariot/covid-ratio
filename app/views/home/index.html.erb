@@ -1,1 +1,16 @@
-bla
+<div class="container-fluid">
+  <div class="mt-5"></div>
+  <div class="row justify-content-center">
+    Dati aggiornati al giorno <%= @reading.date.strftime("%d/%m/%Y") %>
+  </div>
+  <div class="row justify-content-center pippo">
+    <%= (@reading.new_positives.to_f / @reading.new_tampons.to_f * 100).round(2) %>%
+  </div>
+
+  <div class="row justify-content-center">
+    Nuovi positivi rispetto al giorno precedente: <%= @reading.new_positives %>
+  </div>
+  <div class="row justify-content-center">
+    Nuovi tamponi rispetto al giorno precedente: <%= @reading.new_tampons %>
+  </div>
+</div>
