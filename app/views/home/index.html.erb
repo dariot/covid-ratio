@@ -7,6 +7,14 @@
     </div>
   </div>
 
+  <div class="mt-4"></div>
+
+  <div class="row">
+    <div class="col">
+      <p class="text-center">Percentuale di nuovi positivi:</p>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col">
       <div class="percentage">
@@ -17,12 +25,12 @@
 
   <div class="row">
     <div class="col">
-      <p class="text-center">Nuovi positivi rispetto al giorno precedente: <%= @reading.new_positives %></p>
+      <p class="text-center">Nuovi positivi rispetto al giorno precedente: <%= number_with_delimiter(@reading.new_positives, delimiter: '.') %></p>
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <p class="text-center">Nuovi tamponi rispetto al giorno precedente: <%= @reading.new_tampons %></p>
+      <p class="text-center">Nuovi tamponi rispetto al giorno precedente: <%= number_with_delimiter(@reading.new_tampons, delimiter: '.') %></p>
     </div>
   </div>
 </div>
