@@ -20,3 +20,7 @@
 # Learn more: http://github.com/javan/whenever
 
 set :output, "#{path}/log/cron.log"
+
+every :day, at: '5.10pm' do
+  runner "Reading.update_db"
+end
