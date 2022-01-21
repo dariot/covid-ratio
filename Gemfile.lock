@@ -92,6 +92,8 @@ GEM
     ffi (1.15.4)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    groupdate (6.0.1)
+      activesupport (>= 5.2)
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.5)
@@ -228,6 +230,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   chartkick
+  groupdate
   jbuilder (~> 2.7)
   jquery-rails
   listen (~> 3.3)

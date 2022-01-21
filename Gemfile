@@ -32,6 +32,7 @@ gem 'whenever', require: false
 gem 'bootstrap', '~> 5.1.3'
 gem 'jquery-rails'
 gem "chartkick"
+gem "groupdate"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
