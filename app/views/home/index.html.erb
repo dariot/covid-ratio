@@ -23,6 +23,14 @@
     </div>
   </div>
 
+  <div class="row bg-light p-3">
+    <div class="col">
+      <%= line_chart Reading.group_by_day(:created_at).maximum(:new_positives) %>
+    </div>
+  </div>
+
+  <div class="my-3">
+
   <div class="row">
     <div class="col">
       <p class="text-center">Nuovi positivi rispetto al giorno precedente: <%= number_with_delimiter(@reading.new_positives, delimiter: '.') %></p>
